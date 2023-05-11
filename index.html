@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img style="width: 15vw;"
+                        src="data:image/png;base64,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"
+                        alt="">
+                </div>
+                <div class="menubar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#"> About Us</a></li>
+                        <li><a href="#">Services</a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#section1">3D Animation & Visualization</a></li>
+                                    <li><a href="#section2">App Development</a></li>
+                                    <li><a href="#">Content Writing</a></li>
+                                    <li><a href="#">E-Commerce</a></li>
+                                    <li><a href="#">Print Media Solution</a></li>
+                                    <li><a href="#">QA & Software Testing</a></li>
+                                    <li><a href="#">SEO Optimization</a></li>
+                                    <li><a href="#">UX/UI Design</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Trainings</a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Fluter App Evelopment</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Careers</a> </li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="service">
+        <h1>Services</h1><b>.</b>
+    </div>
+    <div>
+        <section class="services animation">
+            <h1>3D Animation</h1>
+            <p>3D Animation is an essential aspect of product and project presentations. Products come to life with 3D
+                animation images. The high quality of the visuals gives a convincing picture of the project and, as a
+                presentation material, allows for a flawless and realistic view of the final product. 3D animations and
+                images are ideal for product presentations, training, or use on the web.</p>
+            <div id="section1">
+                <div>
+                    <img data-aos="zoom-in" data-aos-duration="1500"
+               src="https://64.media.tumblr.com/56a59b12fa0c070682bf22039b82c25c/bad087c49d3b32f3-44/s500x750/0c814d33349929a376e144c43e717c14d829f0d8.gifv"
+                        alt="">
+                </div>
+                <div>
+                    <h2 data-aos="fade-down" data-aos-duration="1500">3D Animation & Visualization Services</h2>
+                    <div class="div1">
+                        <div class="div2">
+                            <ul>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> 3D Animation</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Video Animation</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> 3D Architecture Modeling</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Character Modeling</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> 3D Modeling</li>
+                            </ul>
+                        </div>
+                        <div class="div2">
+                            <ul>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> 3D visualization</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Product Animation</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Character Animation</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> 3D Architecture Animation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services app">
+            <h1>App Development</h1>
+            <p>Through Apps Development, We help our customers to take advantage of rapid technological change without burdening their business. We create, integrate and operate features in their mobile applications and enterprise architectures to ensure tangible results.</p>
+
+            <p> We provide Excellent mobile experiences with deep technology expertise to deliver custom apps development services that simplify your business performance at reduced costs. We provide end-to-end web and mobile application development services, either customer-oriented or enterprise-level, including planning, design, integration, and management across separate verticals.</p>
+            <div id="section2">
+                <div>
+                    <h2 data-aos="fade-down" data-aos-duration="1500">Our App Development Services</h2>
+                    <div class="div1">
+                        <div class="div2">
+                            <ul>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Native iOS Applications</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Native Android Applications</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Mobile Application Consulting</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Mobile Application Design</li>
+                                <li data-aos="fade-right" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Mobile App Development</li>
+                            </ul>
+                        </div>
+                        <div class="div2">
+                            <ul>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Cross-Platform Development</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Hybrid Mobile Applications</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Mobile Application Migration</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Mobile Application Testing</li>
+                                <li data-aos="fade-left" data-aos-duration="1500"><i class="fa-solid fa-check"></i> Application Modernization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img data-aos="zoom-in" data-aos-duration="1500"
+                    src="https://blog.kms-solutions.asia/hubfs/omni-channel-technology-online-retail-business%20%281%29.jpg"
+                    alt="">
+                    <img src="https://media.licdn.com/dms/image/C5112AQGSS323T78XoA/article-cover_image-shrink_720_1280/0/1577271067146?e=2147483647&v=beta&t=4VgqWviHfoGL7FkMcl6AgpmjCH_LMTYNl53DlgZOWk4" alt="">
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="services"><img src="" alt=""></section>
+        <section class="services"><img src="" alt=""></section>
+        <section class="services"><img src="" alt=""></section>
+        <section class="services"><img src="" alt=""></section>
+    </div>
+
+    
+</body>
+<script>
+    AOS.init();
+  </script>
+
+</html>
